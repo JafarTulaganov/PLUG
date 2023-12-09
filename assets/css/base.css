@@ -1,0 +1,250 @@
+@font-face {
+  font-family: 'Halvar';
+  src: url(../fonts/HalvarBreit-Rg.ttf);
+}
+
+@font-face {
+  font-family: 'Halvar-500';
+  src: url(../fonts/HalvarBreit-Md.ttf);
+}
+
+@font-face {
+  font-family: 'Halvar-600';
+  src: url(../fonts/HalvarBreit-Bd.ttf);
+}
+
+@font-face {
+  font-family: 'Interfaces';
+  src: url(../fonts/TTINTERFACES-REGULAR.TTF);
+}
+
+@font-face {
+  font-family: 'Interfaces-500';
+  src: url(../fonts/TTINTERFACES-MEDIUM.TTF);
+}
+
+:root {
+  --decor: 'Halvar';
+  --decor-medium: 'Halvar-500';
+  --decor-bold: 'Halvar-600';
+
+  --regular: 'Interfaces';
+  --medium: 'Interfaces-500';
+
+  --yellow: #ffa206;
+  --black: #020105;
+  --blue: #0068c9;
+  --border: #ebebeb;
+  --light: #5d5d5f;
+}
+
+body {
+  font-family: var(--regular);
+  color: #020105;
+  background: white;
+}
+
+::-webkit-scrollbar {
+  width: 0.44rem;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: revert;
+  background: transparent;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  padding: 0;
+}
+button {
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input,
+textarea {
+  -webkit-user-select: auto;
+  background: transparent;
+  border: none;
+}
+
+textarea {
+  white-space: revert;
+}
+
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+:where(pre) {
+  all: revert;
+}
+
+::placeholder {
+  color: unset;
+}
+
+::marker {
+  content: initial;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([contenteditable]:not([contenteditable='false'])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+:where([draggable='true']) {
+  -webkit-user-drag: element;
+}
+
+:where(dialog:modal) {
+  all: revert;
+}
+
+p {
+  margin: 0;
+}
+.container {
+  max-width: 1760px;
+}
+.section__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  text-transform: uppercase;
+  font-family: var(--decor-bold);
+  margin: 0;
+}
+.blue {
+  color: var(--blue);
+}
+.yellow {
+  color: var(--yellow);
+}
+.batton {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 150%;
+  color: var(--yellow);
+  padding: 8px 24px;
+  border-radius: 34px;
+  transition: 0.4s;
+  border: 1px solid var(--yellow);
+  margin-bottom: 24px;
+}
+.batton:hover {
+  background: var(--yellow);
+  color: white;
+  text-decoration: none;
+}
+.accordion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.accordion__item {
+  margin-bottom: 0 !important;
+  background: #f5f5f7;
+  border-radius: 16px;
+  border: none !important;
+}
+.accordion__trigger {
+  padding: 16px 24px !important;
+}
+.accordion__content ul {
+  padding: 0 24px 16px 24px !important;
+}
+.accordion__content p {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 150%;
+}
+.small {
+  max-width: 1440px;
+}
+.smaller {
+  max-width: 1144px;
+}
+.accordion__trigger_active .arrow svg {
+  transform: rotate(180deg);
+}
+.nuxt-link-exact-active {
+  color: var(--yellow) !important;
+}
+.nuxt-link-exact-active::after {
+  width: 100% !important;
+}
+.section__title {
+  font-size: 32px;
+  line-height: 120%;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .section__title {
+    font-size: 24px !important;
+    line-height: 150% !important;
+  }
+  .accordion {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+  }
+  .accordion .title {
+    font-size: 20px;
+    margin: 0;
+  }
+  .accordion__content p {
+    font-size: 16px;
+  }
+}
+[role='button'] {
+  cursor: auto !important;
+}
+.swiper-button-lock {
+}
+.swiper-button-disabled {
+  opacity: 0.5;
+}

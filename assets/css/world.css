@@ -1,0 +1,88 @@
+.world__wrap {
+  position: relative;
+  padding: 56px 0 40px 0;
+  background: linear-gradient(141deg, #083661 0%, #0657a3 100%);
+}
+.world__wrap .container {
+  margin-top: -200px;
+}
+.world__wrap path {
+  fill: #386fa3 !important;
+  stroke-width: 0.4px !important;
+  stroke: #8b93a8 !important;
+}
+.United.States,
+#DE,
+.Russian.Federation,
+#KZ,
+#KR,
+#IR,
+.Turkey,
+#UZ {
+  fill: var(--yellow) !important;
+}
+.world__wrap .brand {
+  position: absolute;
+  top: 54px;
+  left: 64px;
+  width: 206px;
+  object-fit: contain;
+}
+.world__wrap .cardo {
+  background: rgba(255, 255, 255, 0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.56);
+  backdrop-filter: blur(32px);
+  border-radius: 32px;
+  display: inline-flex;
+  align-items: center;
+  padding: 32px 56px;
+  gap: 144px;
+}
+.world__wrap .item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.world__wrap .num {
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 130%;
+  color: white;
+  font-family: var(--decor-medium);
+}
+.world__wrap .sub {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  color: #9a999b;
+}
+@media screen and (max-width: 1024px) {
+  .world__wrap .brand {
+    width: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .world__wrap svg {
+    height: 400px !important;
+    transform: translateY(-50px);
+    pointer-events: none;
+  }
+  .world__wrap .cardo {
+    padding: 16px;
+    gap: 24px;
+    border-radius: 12px;
+  }
+  .world__wrap .num {
+    font-size: 22px;
+  }
+  .world__wrap .sub {
+    font-size: 18px;
+  }
+  .world__wrap .cardo .img {
+    display: none;
+  }
+  .world__wrap .container {
+    display: flex;
+    justify-content: center;
+  }
+}
